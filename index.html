@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Master</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+  .mont{
+    font-family: 'Montserrat', sans-serif;
+  }
+</style>
+</head>
+<body>
+    <header>
+        <h1 class="text-[#31A5AC] mont font-bold text-5xl text-center mt-10">Money Master💰</h1>
+    </header>
+
+    <main class="flex flex-col lg:flex-row lg:justify-center">
+        <section class="flex flex-col lg:flex-row gap-12 items-center mt-12">
+            <div>
+                <img src="./money-master.png" alt="">
+            </div>
+            <div class="w-[34rem] h-[50rem] bg-[#F8F8F8]">
+                <button id="reset-btn" class="btn btn-accent text-white text-lg float-right mt-4 mr-4">Reset</button>
+                <h1 class="text-black text-center mont text-xl mt-12 mb-7">Income</h1>
+
+                <p class=" text-center mont text-lg">Income: 
+                    <input id="total-income" class="w-[14rem] h-[2.75rem] rounded-md bg-[#DCDCDC] ml-3 border-none pl-4" type="number" placeholder="Your Income">
+                </p>
+                <h1 class="text-black text-center mont text-xl mt-12 mb-7">Expenses</h1>
+
+                <p class=" text-center mont text-lg">Food: 
+                    <input id="food-cost" class="w-[14rem] h-[2.75rem] rounded-md bg-[#DCDCDC] ml-[1.5rem] border-none pl-4" type="number" placeholder="Food Cost">
+                </p>
+                <p class="mt-4 text-center mont text-lg">Rent: 
+                    <input id="rent-cost" class="w-[14rem] h-[2.75rem] rounded-md bg-[#DCDCDC] ml-[1.5rem] border-none pl-4" type="number" placeholder="Rent Cost">
+                </p>
+                <p class="mt-4 text-center mont text-lg">Cloths: 
+                    <input id="cloth-cost" class="w-[14rem] h-[2.75rem] rounded-md bg-[#DCDCDC] ml-[0.75rem] border-none pl-4" type="number" placeholder="Cloths Cost">
+                </p>
+                <div class="text-center mt-12 mb-7">
+                    <button id="calculate-btn" class="btn btn-primary capitalize mont text-lg font-semibold bg-[#59A5FF] rounded w-[12rem] border-none text-white">Calculate</button>
+                </div>
+
+                <h1 class="mont text-xl font-semibold text-center">Total Expenses: <span id="total-expense">00</span></h1>
+                <h1 class="mont text-xl font-semibold text-center mt-8">Balance: <span id="balance-amount">00</span></h1>
+                <p class="mt-4 text-center mont text-lg">Save: 
+                    <input id="saving-percentage-filed" class="w-[8rem] h-[2.8rem] rounded-md bg-[#DCDCDC] ml-[0.75rem] border-none pl-4" type="number" placeholder="20"> 
+                    <span class="px-4">
+                        %
+                    </span> 
+                    <button id="saving-amount" class="btn btn-primary capitalize mont text-lg font-semibold bg-[#59A5FF] rounded w-[12rem] border-none text-white">Save</button>
+
+                </p>
+                <h1 class="mont text-xl font-semibold text-center mt-6">Saving Amount: <span id="saving-amount-output">00</span></h1>
+                <h1 class="mont text-xl font-semibold text-center mt-4">Remaining Balance: <span id="remianing-balance">00</span></h1>
+                
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
